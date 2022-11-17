@@ -13,6 +13,10 @@ func aryUnique(arr []int) map[int]int {
 	return m
 }
 
+func RemoveIndex(a []int, index int) []int {
+	return append(a[:index], a[index+1:]...)
+}
+
 func findLeastNumOfUniqueInts(arr []int, k int) int {
 
 	if k == 0 {
@@ -50,6 +54,17 @@ func findLeastNumOfUniqueInts(arr []int, k int) int {
 					t += val
 
 				}
+				// fmt.Println("t=")
+				// fmt.Println(t)
+				// fmt.Println("n=")
+				// fmt.Println(n)
+				// fmt.Println(n)
+
+				// indexを見つけて、arrからも削除
+				// index := pos(arr, key)
+				// arr = RemoveIndex(arr, index)
+				// fmt.Println("k-t=")
+				// fmt.Println(k - t)
 
 				fmt.Printf("k-t: %d, n:%d\n", k-t, n) // Prints `Binary: 100\101`
 
